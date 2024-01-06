@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenPrompt Advanced Usage</title>
+  <link rel="stylesheet" href="./advancedUsage.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="header-label">OpenPrompt Advanced Usage</h1>
+  </header>
+
+  <main>
+    <section id="example15">
+      <h2>Example 15: Iterative Prompt Refinement</h2>
+      <code>
+        openprompt
+        Copy code
+        # Iterative Prompt Refinement Example
+        template iterativeRefinementPrompt {
+          "Generate a short story about a mysterious artifact. After each response, refine the prompt based on the generated content."
+        }
+
+        prompt(iterativeRefinementPrompt)
+      </code>
+      <p>In this example, a template is used to iteratively refine a story prompt. After each response, the prompt is refined based on the generated content, allowing for an interactive storytelling experience.</p>
+    </section>
+
+    <section id="example16">
+        <h2>Example 16: Contextual Parameterization</h2>
+        <code>
+          openprompt
+          Copy code
+          # Contextual Parameterization Example
+          template contextualParameterPrompt {
+            "Given the context of <<context>>, provide insights into the impact of emerging technologies on <<industry>>."
+          }
+  
+          prompt(contextualParameterPrompt, { "context": "current global events", "industry": "finance" })
+        </code>
+        <p>This example showcases contextual parameterization, where the context and industry parameters are dynamically inserted into the prompt to generate insights specific to the given context.</p>
+      </section>
+  
+      <section id="example17">
+        <h2>Example 17: Multi-Step Inference</h2>
+        <code>
+          openprompt
+          Copy code
+          # Multi-Step Inference Example
+          template multiStepInferencePrompt {
+            "Based on the provided information, make a series of inferences about the potential outcomes and implications of a futuristic scenario involving <<elements>>."
+          }
+  
+          prompt(multiStepInferencePrompt, { "elements": "advanced AI, sustainable energy, space exploration" })
+        </code>
+        <p>This example involves multi-step inference, instructing GPT-3.5 to make a series of inferences about potential outcomes and implications of a futuristic scenario based on provided elements.</p>
+      </section>
+  
+      <section id="example18">
+        <h2>Example 18: Guided Creative Writing</h2>
+        <code>
+          openprompt
+          Copy code
+          # Guided Creative Writing Example
+          template guidedWritingPrompt {
+            "Start a creative writing piece with the given sentence: <<initialSentence>>. Continue the story, introducing elements of suspense and unexpected twists."
+          }
+  
+          prompt(guidedWritingPrompt, { "initialSentence": "In the quiet town of Everwood, a peculiar event unfolded on a stormy night." })
+        </code>
+        <p>Here, the guided writing prompt instructs GPT-3.5 to start a creative writing piece with a provided sentence and continue the story by introducing elements of suspense and unexpected twists.</p>
+      </section>
+  
+      <section id="example19">
+        <h2>Example 19: User-Driven Story Generation</h2>
+        <code>
+          openprompt
+          Copy code
+          # User-Driven Story Generation Example
+          template userDrivenStoryPrompt {
+            "Let's co-create a story! You start by providing the opening sentence, and I'll build on it. Here's your starting point: <<userOpeningSentence>>."
+          }
+  
+          prompt(userDrivenStoryPrompt, { "userOpeningSentence": "In a distant galaxy, a lone explorer embarked on a journey to unravel the mysteries of an undiscovered planet." })
+        </code>
+        <p>This example demonstrates user-driven story generation, where the user provides the opening sentence, and GPT-3.5 collaboratively builds on it to co-create a story.</p>
+      </section>
+  
+      <section id="example20">
+        <h2>Example 20: Dynamic Scenario Mapping</h2>
+        <code>
+          openprompt
+          Copy code
+          # Dynamic Scenario Mapping Example
+          template dynamicScenarioMappingPrompt {
+            "Given the evolving landscape of technology and society, dynamically map the potential scenarios and challenges that may arise in the next <<years>> years."
+          }
+  
+          prompt(dynamicScenarioMappingPrompt, { "years": 10 })
+        </code>
+        <p>Instruct GPT-3.5 to dynamically map potential scenarios and challenges that may arise in the next specified number of years, adapting to the evolving landscape of technology and society.</p>
+      </section>
+  
+      <p>These advanced usage examples showcase the flexibility and adaptability of OpenPrompt. Experiment with these techniques and tailor them to your specific needs. For more guidance on customizing prompts and exploring advanced features, refer to the Documentation.</p>
+    </main>
+  
+    <script src="./advancedUsage.js"></script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenPrompt Examples</title>
+  <link rel="stylesheet" href="./example.css"> 
+</head>
+
+<body>
+
+  <header>
+    <h1 id="header-label">OpenPrompt Examples</h1>
+  </header>
+
+  <main>
+
+    <!-- Example 1 -->
+    <section>
+      <h2>Example 1: Simple Prompt</h2>
+      <pre>
+        <code>
+# Simple Prompt Example
+prompt("Generate a creative story about a dragon and a knight.")
+        </code>
+      </pre>
+      <button onclick="executeExample(1)">Run Example</button>
+      <div id="output1"></div>
+    </section>
+
+    <!-- Example 2 -->
+    <section>
+      <h2>Example 2: Using a Template</h2>
+      <pre>
+        <code>
+# Using a Template Example
+template introduction {
+  "Hello, &lt;&lt;name&gt;&gt;! Welcome to OpenPrompt. How can I assist you today?"
+}
+
+prompt(introduction, { "name": "User" })
+        </code>
+      </pre>
+      <button onclick="executeExample(2)">Run Example</button>
+      <div id="output2"></div>
+    </section>
+
+  <!--Example 3-->
+  <section>
+    <h2>Example 3: Parameterized Prompt</h2>
+    <pre>
+      <code>
+        # Parameterized Prompt Example
+        template favoriteColor {
+          "What is your favorite color, <<name>>?"
+        }
+        
+        prompt(favoriteColor, { "name": "Alice" })        
+      </code>
+    </pre>
+    <button onclick="executeExample(3)">Run Example</button>
+    <div id="output3"></div>
+  </section>  
+  <!--Example 4-->
+  <section>
+    <h2>Example 4: Dynamic Content Insertion </h2>
+    <pre>
+      <code>
+        # Dynamic Content Insertion Example
+        template personalizedMessage {
+          "Hello, <<name>>! Your favorite animal is a <<animal>>."
+        }
+        
+        prompt(personalizedMessage, { "name": "Bob", "animal": "lion" })
+              
+      </code>
+    </pre>
+    <button onclick="executeExample(4)">Run Example</button>
+    <div id="output4"></div>
+  </section>  
+
+<!--Example 5-->
+<section>
+  <h2>Example 5: Making Arguments</h2>
+  <pre>
+    <code>
+      # Making Arguments Example
+      template argumentativePrompt {
+        "Provide a convincing argument for or against the use of artificial intelligence in education."
+      }
+      
+      prompt(argumentativePrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(5)">Run Example</button>
+  <div id="output5"></div>
+</section>  
+
+<!--Example 6-->
+<section>
+  <h2>Example 6: Emphasizing a Point</h2>
+  <pre>
+    <code>
+      # Emphasizing a Point Example
+      template emphasizePrompt {
+        "Emphasize the importance of environmental sustainability in today's world."
+      }
+      
+      prompt(emphasizePrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(6)">Run Example</button>
+  <div id="output6"></div>
+</section>  
+
+<!--Example 7-->
+<section>
+  <h2>Example 7: Differentiating Concepts </h2>
+  <pre>
+    <code>
+      # Differentiating Concepts Example
+      template differentiatePrompt {
+        "Distinguish between machine learning and artificial intelligence, highlighting their key differences."
+      }
+      
+      prompt(differentiatePrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(7)">Run Example</button>
+  <div id="output7"></div>
+</section>  
+
+<!--Example 8-->
+<section>
+  <h2>Example 8: Comparing Options </h2>
+  <pre>
+    <code>
+      # Comparing Options Example
+      template compareOptionsPrompt {
+        "Compare and contrast the advantages and disadvantages of renewable energy sources such as solar and wind power."
+      }
+      
+      prompt(compareOptionsPrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(8)">Run Example</button>
+  <div id="output8"></div>
+</section>  
+
+<!--Example 9-->
+<section>
+  <h2>Example 9: Analyzing a Situation </h2>
+  <pre>
+    <code>
+      # Analyzing a Situation Example
+      template analyzeSituationPrompt {
+        "Analyze the impact of social media on modern communication and interpersonal relationships."
+      }
+      
+      prompt(analyzeSituationPrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(9)">Run Example</button>
+  <div id="output9"></div>
+</section>  
+
+<!--Example 10-->
+<section>
+  <h2> Example 10: Making Inferences </h2>
+  <pre>
+    <code>
+      # Making Inferences Example
+      template inferPrompt {
+        "Based on recent trends, make reasonable inferences about the future of remote work and its effects on traditional office spaces."
+      }
+      
+      prompt(inferPrompt)      
+    </code>
+  </pre>
+  <button onclick="executeExample(10)">Run Example</button>
+  <div id="output10"></div>
+</section>  
+
+<!--Example 11-->
+<section>
+  <h2>Example 11: Presenting Cases </h2>
+  <pre>
+    <code>
+      # Presenting Cases Example
+      template legalCasePrompt {
+        "Present a hypothetical legal case involving emerging technologies and discuss potential legal implications and resolutions."
+      }
+      
+      prompt(legalCasePrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(11)">Run Example</button>
+  <div id="output11"></div>
+</section>  
+
+<!--Example 12-->
+<section>
+  <h2>Example 12: Scenario Generation </h2>
+  <pre>
+    <code>
+      # Scenario Generation Example
+      template scenarioPrompt {
+        "Create a fictional scenario set in a future world where advanced AI systems coexist with humans, exploring societal dynamics and challenges."
+      }
+
+      prompt(scenarioPrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(12)">Run Example</button>
+  <div id="output12"></div>
+</section>  
+
+<!--Example 13-->
+<section>
+  <h2>Example 13: Calculation </h2>
+  <pre>
+    <code>
+      # Calculation Example
+      template calculatePrompt {
+        "Calculate the square root of the sum of the squares of 5 and 8."
+      }
+      
+      prompt(calculatePrompt)
+                  
+    </code>
+  </pre>
+  <button onclick="executeExample(13)">Run Example</button>
+  <div id="output13"></div>
+</section>  
+
+<!--Example 14-->
+<section>
+  <h2>Example 14:  Mapping Concepts </h2>
+  <pre>
+    <code>
+      # Mapping Concepts Example
+      template mapConceptsPrompt {
+        "Create a mind map illustrating the key concepts and relationships in the field of artificial intelligence."
+      }
+      
+      prompt(mapConceptsPrompt)            
+    </code>
+  </pre>
+  <button onclick="executeExample(14)">Run Example</button>
+  <div id="output14"></div>
+</section>  
+  </main>
+  <script src="./example.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenPrompt Installation Guide</title>
+  <link rel="stylesheet" href="./install.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="header-label">OpenPrompt Installation Guide</h1>
+  </header>
+
+  <main>
+
+    <h2>Prerequisites</h2>
+    <p>Before installing OpenPrompt, ensure that you have the following prerequisites:</p>
+    <ul>
+      <li>Python 3.6 or later installed on your system.</li>
+      <li>An active internet connection to download necessary dependencies.</li>
+    </ul>
+
+    <h2>Installation Steps</h2>
+
+    <h3>Step 1: Clone the Repository</h3>
+    <code>git clone https://github.com/your-username/OpenPrompt.git</code>
+    <p>Replace your-username with your GitHub username.</p>
+
+    <h3>Step 2: Navigate to the Project Directory</h3>
+    <code>cd OpenPrompt</code>
+
+    <h3>Step 3: Set Up a Virtual Environment (Optional but Recommended)</h3>
+    <code>python3 -m venv venv</code>
+    <p>Activate the virtual environment:</p>
+    <ul>
+      <li>On Windows: <code>venv\Scripts\activate</code></li>
+      <li>On macOS/Linux: <code>source venv/bin/activate</code></li>
+    </ul>
+
+    <h3>Step 4: Install Dependencies</h3>
+    <code>pip install -r requirements.txt</code>
+
+    <h3>Step 5: Verify Installation</h3>
+    <code>python -m openprompt --version</code>
+    <p>This should display the installed version of OpenPrompt.</p>
+
+    <h3>Step 6: Ready to Use!</h3>
+    <p>OpenPrompt is now installed and ready to use. You can start experimenting with prompts and exploring the features
+      of the prompting language.</p>
+
+    <h2>Updating OpenPrompt</h2>
+
+    <h3>To update to the latest version of OpenPrompt, navigate to the project directory and pull the latest changes
+      from the GitHub repository:</h3>
+    <code>git pull origin main</code>
+    <p>If there are updates to the dependencies, re-run:</p>
+    <code>pip install -r requirements.txt --upgrade</code>
+    <p>Now you're all set to use the latest version of OpenPrompt!</p>
+
+    <h2>Uninstalling OpenPrompt</h2>
+
+    <h3>To uninstall OpenPrompt and remove the virtual environment (if used), simply delete the project directory and
+      the virtual environment directory.</h3>
+    <code>
+      # Navigate to the parent directory containing OpenPrompt
+      cd ..
+
+      # Delete the OpenPrompt directory
+      rm -rf OpenPrompt
+
+      # If a virtual environment was created, delete it
+      rm -rf venv  # On macOS/Linux
+      rmdir /s /q venv  # On Windows
+    </code>
+    <p>That's it! You have successfully installed, updated, and uninstalled OpenPrompt. If you encounter any issues
+      during the installation process, refer to the Reporting Issues section of the documentation.</p>
+
+  </main>
+
+  <script src="./install.js"></script>
+
+</body>
+
+</html>
